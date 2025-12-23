@@ -1,0 +1,246 @@
+Capstone Project RPL
+Ketentuan Umum
+Karakteristik Umum Semua Topik
+Dampak Langsung ke Masyarakat Luas 3T:
+
+Semua topik fokus pada kebutuhan mendasar masyarakat 3T (pendapatan, kesehatan, pendidikan, infrastruktur)
+Bukan untuk urban elites atau B2B, tapi B2C grassroots level
+Measurable social impact yang bisa dilihat & dirasakan langsung
+
+Solusi General & Scalable:
+
+Solusi tidak "too specific" tapi cukup general bisa diterapkan di berbagai 3T
+
+Tech stack yang reasonable (bukan perlu IoT mahal, bisa SMS-based, offline-first)
+Fokus pada utility bukan fancy features
+Bisa MVP dengan scope terbatas
+
+Problem Statement Data-Backed:
+
+Setiap topik punya statistik & data konkret (bukan asumsi)
+
+Dari sumber resmi (BPS, Kemenkes, OJK, World Bank, WHO, dll)
+Menunjukkan skala masalah (jumlah orang affected, kerugian ekonomi, dll)
+
+Metrik Dampak Terukur & Konkret:
+
+Tidak vague seperti "satisfaction" atau "awareness improvement"
+
+Semua metrik bisa dikumpulkan data real dari pengguna/komunitas
+Mix antara: behavior change, financial impact, health impact, access improvement
+Bisa tracking sebelum-sesudah atau baseline-endline
+Panduan Implementasi untuk Mahasiswa
+1. Research & Problem Validation
+Tujuan: Validasi problem statement & definisikan baseline conditions
+
+Metode Feasible untuk Semester 3 (Tanpa Field Survey Langsung):
+
+Desktop Research: Kumpulkan data sekunder dari BPS, Kemenkes, OJK, World Bank, laporan NGO, jurnal akademis
+Desk-Based Stakeholder Analysis: Analisis siapa target users & stakeholder dari literatur & data yang ada
+Secondary Data Analysis: Gunakan statistik publik (data dinas, kesehatan, pendidikan) untuk establish baseline
+Expert Consultation: Diskusi dengan akademisi/expert via email atau video call (bukan field survey)
+Proxy Indicators: Gunakan available data (contoh: untuk income baseline, pakai data BPS rata-rata UMKM/petani)
+Comparative Solution Analysis: Review aplikasi/solusi serupa untuk understand best practices & gaps
+Output: Problem statement yang solid dengan data + preliminary baseline understanding
+
+2. Spesifikasi Lengkap & Design
+Tujuan: Buat spesifikasi komplit aplikasi sesuai standar industri
+
+Deliverable Sesuai Gemastik (dalam Proposal):
+
+A. Software Requirements Specification (SRS):
+
+Functional Requirements: 20+ user stories dengan acceptance criteria yang jelas
+Use Cases: Minimum 8 use cases yang describe main user interactions & edge cases
+Feature Prioritization: MoSCoW method (Must-have, Should-have, Could-have, Won't-have)
+Input/Output Specifications: Deskripsikan setiap fitur: input apa, output apa, kondisi error handling
+B. Non-Functional Requirements:
+
+Performance: Load time target, jumlah concurrent users, storage requirements
+Security: Authentication mechanism, data privacy (terutama untuk health/financial data)
+Usability: Accessibility (low-spec phones, offline capability, simple UI untuk low-literacy users)
+Reliability: Uptime target, data sync reliability, backup strategy
+C. System Architecture & Context:
+
+System Boundary Diagram: Komponen sistem & external interfaces (SMS gateway, payment, weather API, dll)
+Assumptions & Dependencies: Contoh: "must work offline", "requires SMS gateway provider", "need 2G+ network"
+Technology Stack Justification: Kenapa pilih teknologi tertentu (feasibility, scalability, maintenance)
+D. User Experience Design:
+
+User Personas: 3-4 detailed personas (contoh: petani 45th Kalimantan, ibu rumah tangga Sulawesi)
+User Journey Mapping: Flow dari user perspective untuk main use cases
+Wireframes: 8-10 screen wireframes untuk key features (Figma, Canva, atau pen & paper scanned)
+UI/UX Guidelines: Font size untuk low-vision users, offline indicator, error messages yang jelas, color contrast
+E. Impact Metrics & Measurement Plan:
+
+Define 5-8 metrik dampak konkret & measurable
+Define cara measurement untuk setiap metrik (how to collect data)
+Define baseline conditions & target impact level
+Contoh untuk PetaniConnect: "Income increase Rp (baseline → target)", "Price transparency adoption (%)", "Decision confidence (survey score)"
+3. MVP Definition & Scope Boundaries
+Tujuan: Tentukan MVP yang feasible dan valuable
+
+MVP Harus:
+
+Solve Core Problem: Fitur MVP harus address main pain point (jangan side features dulu)
+Max 30-40% dari Full Spec: MVP adalah essence, bukan versi lengkap
+Measurable Impact: Ada metrik dampak yang bisa diukur dari MVP (minimal 2-3 dari full metrics)
+Implementable: Feasible untuk 3-4 mahasiswa dengan available resources & timeline
+MVP Document Harus Jelas Contain:
+
+Core User Stories: 3-5 essential user stories aja (dari 20+ full spec)
+Feature Scope: Jelas in/out untuk MVP (milestone 1) vs future releases
+MVP User Flow: Simplified workflow (main happy path, minimal branching)
+MVP Wireframes: 3-4 screens yang essential (simplified dari full 8-10)
+Architecture for MVP: Backend, database schema, API design (lite version)
+Effort Estimation: Estimated hours per feature untuk MVP implementation
+Success Metrics for MVP: Mana metrics yang akan diukur dari MVP pilot
+Contoh MVP Scope:
+
+Full PetaniConnect: Price tracking + weather + tips + forum + video + marketplace + directory (20+ features)
+MVP PetaniConnect: Daily price info + weather + simple tips only (3 main features, 4-5 screens)
+MVP Success Metrics: Price accuracy, usage frequency, farmer satisfaction (subset dari full metrics)
+4. MVP Implementation & Data Collection
+Tujuan: Build MVP yang functional & collect real usage/impact data
+
+Implementation Standards:
+
+Code harus clean & maintainable (following best practices, not overengineered)
+Implement offline-first sejak awal (critical untuk 3T)
+Built-in analytics untuk track feature usage & user behavior
+Simple user feedback mechanism (form, rating, atau comments)
+Data Collection Strategy:
+
+Usage Analytics: Which features used, frequency, time spent, retention rate
+User Feedback: Simple questionnaire (Did this help? Scale 1-5? Suggestions?)
+Behavioral Indicators: Changes in user behavior (frequency of action, pattern shifts)
+Baseline Comparison: Pre-app vs post-app behavior/outcomes (even self-reported OK)
+Impact Proxy: For metrics (contoh: jika income hard to measure, track "frequency of checking prices" as proxy)
+Pilot User Groups:
+
+Min 20-50 real MVP pilot users dari target community (dapat dari stakeholder partner)
+Jangan fake users atau internal testing saja (harus real users)
+Track data untuk min 1-2 bulan penggunaan (untuk see patterns)
+5. Final Deliverables (Sesuai Gemastik)
+1. Proposal PDF (max 30 halaman + lampiran):
+
+Judul & Problem Statement (dengan data konkret)
+Tujuan & Manfaat
+Target User & Stakeholder Analysis
+Full SRS Document (requirements, use cases, wireframes)
+Design Specification (personas, journey, mockups, UI guidelines)
+MVP Definition & Scope Boundaries (jelas apa in/out)
+Technology Stack & Justification
+Implementation Plan & Timeline
+Impact Metrics Definition & Measurement Plan
+Screenshots & mockups (min 8-10 wireframes)
+2. Technical Documentation (max 30 halaman):
+
+Background & Problem Analysis (dengan statistik)
+Innovation & Impact Value Proposition
+Functional Description & Feature Details
+Architecture Overview & Technology Stack Rationale
+Implementation Screenshots (MVP demo)
+Security & Privacy Considerations
+Scalability & Future Development Plan
+3. MVP Demo & Video (max 3 menit):
+
+Show MVP in action (real usage scenario)
+Explain problem & why solution matters
+Show key features & user experience
+Demo dengan real/realistic data (bukan lorem ipsum)
+If possible, show pilot user feedback atau usage data
+4. Supporting Materials:
+
+Running MVP: Executable atau hosted URL (fully functional)
+Source Code: GitHub repo dengan clean code, proper documentation, good commit history
+Architecture Diagram: System design & data flow
+Data Collection Results: Usage logs, user feedback, preliminary impact analysis
+Database Schema & API Documentation: If applicable
+Installation & Setup Guide: How to run MVP locally
+5. Final Presentation (15 menit):
+
+Problem → Solution → MVP Demo flow
+Show real MVP working (live demo atau video)
+Present preliminary impact data (dari MVP pilot)
+Q&A preparation (be ready for: scalability questions, sustainability model, technical challenges)
+Source code review jika jury request
+Critical Success Factors
+1. Spesifikasi HARUS Komplit & Industri-Grade:
+Mahasiswa harus submit complete requirements specification dalam proposal
+Spesifikasi harus detail enough sehingga developer lain bisa implement darinya
+Include semua edge cases, error handling, & non-happy-path scenarios
+Jangan ada statement seperti "akan ditentukan saat development" - semua harus jelas di proposal
+2. MVP Scope HARUS Jelas & Bounded:
+MVP clearly separated dari full spec (dokumentasikan apa in/out dengan explicit)
+MVP bukan sekedar "demo" atau "proof of concept" - harus tetap valuable & solve real problem
+MVP implementation timeline realistic (not just 2 minggu untuk semua feature)
+MVP dapat deliver meaningful impact data
+3. Data-Driven Evidence WAJIB Ada:
+Setiap klaim dampak harus punya data bukti (even jika MVP scope kecil)
+Minimal collect data dari 20-50 real MVP pilot users
+Compare dengan baseline (before-after measurement atau user perception shift)
+Don't claim dampak yang belum terbukti dengan data
+Transparansi tentang limitations (contoh: "MVP pilot hanya 30 users, scale impact TBD")
+4. Sustainability & Scalability Thinking:
+Dokumentasikan sustainability plan (business model, maintenance, who continues development)
+Discuss scalability path (how to go from 50 pilot users to 1000s/millions)
+Mention government/partner involvement (for real deployment)
+Realistic about MVP→Production transition
+Success Rubric
+Nilai A (Excellent):
+
+Problem statement dengan data mendalam dari multiple sources
+Spesifikasi super detail, professional grade (production-ready quality)
+MVP dengan jelas scope & clean implementation
+Real impact data dari MVP pilot (measurable metrics with numbers)
+Strong narrative: problem → solution → MVP → impact dengan evidence
+Sustainability & scalability well-thought
+Nilai B (Good):
+
+Problem statement solid dengan adequate data
+Spesifikasi lengkap dengan minor gaps
+MVP implemented & working with decent quality
+Impact data collected but incomplete atau not all metrics covered
+Story clear but some gaps dalam evidence
+Sustainability mentioned tapi tidak detail
+Nilai C (Satisfactory):
+
+Problem & solution clear
+Spesifikasi present tapi kurang detail
+MVP working tapi dengan quality issues
+Minimal impact data collection atau incomplete
+Some metrics measured tapi tidak systematic
+
+PetaniMaju: Platform Informasi Cuaca & Teknik Pertanian Praktis untuk Petani
+9. PetaniMaju: Platform Informasi Cuaca & Teknik Pertanian Praktis untuk Petani 3T
+Problem Statement (Data-Backed):
+
+78% petani 3T mengalami kerugian panen akibat prediksi cuaca yang tidak akurat (studi IAARD)
+Perubahan iklim menyebabkan panen gagal 2-3x per dekade di 3T vs 1x di urban
+Hanya 5% petani 3T memiliki akses ke weather information yang reliable
+Petani 3T masih menggunakan tanda-tanda tradisional (tidak ilmiah) untuk prediksi (65%)
+Kerugian dari cuaca buruk yang tidak terduga mencapai Rp 2 triliun per tahun di Indonesia
+Adopsi teknik pertanian modern sangat rendah (8%) karena lack of knowledge & confidence
+Solusi (General & Scalable): Aplikasi sederhana untuk weather prediction & agricultural best practices lokal:
+
+Prediksi cuaca yang akurat untuk desa/kecamatan spesifik
+Alert real-time untuk cuaca ekstrim
+Tips teknik pertanian praktis yang sesuai musim/cuaca
+Video demo pertanian dalam bahasa lokal (short, bisa offline)
+Calendar tanam yang disesuaikan cuaca lokal
+Info hama & cara mengatasinya (organik, hemat)
+Forum komunitas petani untuk sharing pengalaman
+Fitur tanpa perlu internet (push notification via SMS)
+Target User: 8-12 juta petani kecil di daerah 3T (Sumatera, Kalimantan, Sulawesi, Papua)
+
+Metrik Dampak (Terukur dengan Data Nyata):
+
+Weather Accuracy: % petani yang puas dengan akurasi weather forecast (vs baseline 20%)
+Risk Reduction: Pengurangan kerugian panen akibat cuaca (% dari sebelumnya)
+Technique Adoption: % petani yang menerapkan tips/teknik baru yang dipelajari
+Productivity: Peningkatan hasil panen per hektar (kg/tahun) vs sebelumnya
+Confidence: % petani yang lebih percaya diri membuat keputusan pertanian (survey)
+Information Access: % petani yang rutin mengakses informasi cuaca (min 2x/minggu)
+Cost Savings: Pengurangan penggunaan input yang tidak perlu (pupuk, pestisida) karena tahu waktu tepat
+Community Engagement: Aktivitas forum komunitas & knowledge sharing antar petani
