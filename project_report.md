@@ -93,19 +93,31 @@ erDiagram
 
 ---
 
-## 3. Log Pengerjaan Harian (Daily Progress)
+## 3. Log Pengerjaan Harian (Berdasarkan Git Commit)
 
-Berikut adalah rekapitulasi pekerjaan berdasarkan riwayat pengembangan:
+Berikut adalah rekapitulasi pekerjaan berdasarkan riwayat commit di repository:
 
-| Tanggal | Aktivitas Utama | Detail Pekerjaan |
-|---------|-----------------|------------------|
-| **17 Des** | **Initial Release** (v0.1.0) | Setup project, fitur dasar Cuaca, Tips, dan Navigasi. Integrasi API OpenWeather & Nominatim. |
-| **20 Des** | **Optimization** | Fix bug Git push error. Implementasi Deep Learning model (Python side study). |
-| **21 Des** | **Offline Mode Support** (v0.2.0) | Implementasi Hive caching agar aplikasi bisa berjalan tanpa internet. Fix app freeze saat offline. |
-| **24-25 Des** | **Notification Sync** | Sinkronisasi ID notifikasi dengan ID database agar alarm bisa di-edit/cancel dengan benar. |
-| **29 Des** | **UI Refinement** | Mempercantik tampilan Weather Detail (Hourly/Daily forecast widgets). Pemisahan widget ke file terpisah. |
-| **30 Des** | **Calendar Bugfix** | Memperbaiki bug kritis "Calendar Stuck" setelah menambah jadwal. Menghapus fitur test notifikasi yang tidak perlu. |
-| **31 Des** | **Major Refactor (BLoC)** (v0.3.0) | Migrasi total ke **Flutter BLoC**. Implementasi **Background Service**, **Quiet Mode**, dan restrukturisasi kode (Clean Architecture). Update Dokumentasi lengkap. |
+## 3. Log Pengerjaan Harian (Berdasarkan Git Commit)
+
+Berikut adalah rekapitulasi pekerjaan berdasarkan riwayat commit di repository:
+
+| Tanggal | Commit Message Utama | Detail Aktivitas |
+|---------|---------------------|------------------|
+| **31 Des** | `update docs` | Memperbarui dokumentasi lengkap (README, CHANGELOG, API, CONTRIBUTING) pasca refactor. |
+| **31 Des** | `Refactor: Implement BLoC logic for Calendar, Notifications, and Home navigation` | Finalisasi migrasi BLoC untuk fitur Kalender dan Notifikasi, serta perbaikan navigasi Home. |
+| **29 Des** | `refactor: Separate weather widgets, fix calendar notifications, improve daily forecast` | UI Cleanup: Memisahkan widget cuaca, memperbaiki bug notifikasi kalender, dan meningkatkan tampilan forecast harian. |
+| **28 Des** | `optimize background service and notification service` | Optimasi performa service latar belakang agar notifikasi cuaca lebih reliable. |
+| **25 Des** | `add background services logic for alert and notification weather` | Implementasi logika inti untuk deteksi peringatan cuaca di background. |
+| **25 Des** | `Refactor: Implement Clean Architecture & BLoC for Home, Calendar, Tips, Pests, and Weather features` | **Major Milestone**: Migrasi data layer dan state management ke Clean Architecture + BLoC. |
+| **23 Des** | `add jam, dinamis notification` | Penambahan fitur waktu dinamis pada notifikasi. |
+| **22 Des** | `add feature update data to calendar` | Fitur edit/update jadwal tanam di kalender dan integrasi Supabase. |
+| **21 Des** | `fix(offline): add timeout and offline mode support` | Implementasi fitur offline support dan peningkatan stabilitas. |
+| **20 Des** | `perf: Add cached_network_image for faster image loading` | Optimasi loading gambar dan perbaikan info hama. |
+| **17 Des** | `add notifikasi alert cuaca` | Implementasi awal notifikasi cuaca dan rilis versi v0.1.0. |
+| **15 Des** | `fetch tips | implementation hive to apps` | Integrasi Supabase untuk Tips dan Hive untuk local caching. |
+| **05 Des** | `fix request location` | Perbaikan logika permintaan izin lokasi. |
+| **30 Nov** | `API Weather 0.1` | Integrasi awal OpenWeatherMap API dan UI Homescreen. |
+| **25 Nov** | `Initial commit` | Inisialisasi project dan pembuatan UI Login/Register dasar. |
 
 ---
 
