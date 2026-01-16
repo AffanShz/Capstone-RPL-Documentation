@@ -431,7 +431,7 @@ flowchart TD
         B --> D
         C --> D
         
-        D -->|Ya (22:00-05:00)| E[Skip Notification]
+        D -->|"Ya 22:00-05:00"| E[Skip Notification]
         D -->|Tidak| F[Prepare Notification]
     end
     
